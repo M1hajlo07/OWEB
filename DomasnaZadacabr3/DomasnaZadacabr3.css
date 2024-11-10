@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+    color:blue;
+    font-size: 400%;
+    
+}
+.word{
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+    border-color: blue;
+    color:blue;
+    font-size:150%;
+    cursor:pointer;
+    
+    
+}
+div{
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+}
+#pomos{
+    color:blue;
+    font-size:250%;
+}
+#result{
+    color:blue;
+    text-align:center;
+    font-size:300%;
+}
