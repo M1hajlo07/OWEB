@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renault, Nissan, Toyota, Dacia</title>
+    <style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background: url(background1.jpg) no-repeat center center fixed;
+    background-color: black;
+    background-size: cover;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav{
+    background:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    overflow: auto;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+   
+}
+ nav li{
+    float: left;
+    margin-left: 2em;
+ }
+nav a{
+    width: auto;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    padding:20px 10px;
+}
+nav a:hover{
+    background: #53a3f9;
+    color: black;
+}
+.nav-logos{
+    float: right;
+}
+.nav-logo{
+    max-width: 50px;
+    max-height: 50px;
+}
+nav a.current {
+    background-color: #53a3f9;
+    color: black;
+    font-weight: bold;
+}
+
+.sybbody {
+    padding: 40px 10%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.about-us {
+    margin-bottom: 40px;
+}
+
+.about-us h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brand {
+    flex: 1 1 22%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.brand:hover {
+    transform: translateY(-10px);
+}
+
+.brand img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.brand h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.brand p {
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+.contact-footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.copyright {
+    font-size: 1em;
+    margin-top: 20px;
+    font-style: italic;
+}
+</style>
+    <title>Home - Car Dealership</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca1/home.html">Дома</a></li>
+                <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca1/NoviVozila.html">Нови возила</a></li>
+                <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca1/PolovniVozila.html">Половни возила</a></li>
+                <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca1/Anketa.html">Анкета</a></li>
+                </ul>
+            <div class="nav-logos">
+                <img class="nav-logo" src="dacialogo.png" alt="logo">
+                <img class="nav-logo" src="renaultlogo.jpg" alt="logo">
+                <img class="nav-logo" src="nissanlogo.jpg" alt="logo">
+                <img class="nav-logo" src="toyotalogo.jpg" alt="logo">
+            </div>
+        </nav>
+    </header>
+<section class="sybbody">
+        <div class="about-us">
+            <h2>ЗА НАС</h2>
+            <p>Добредојдовте на нашата веб страна за автомобили! Ние сме посветен тим кој нуди нуди висококвалитетни возила од водечките 
+                брендови како Renault, Nissan, Toyota и Dacia. Без разлика дали барате нови или половни автомобили, 
+                стручни совети за вашето следно купување, ние сме тука да ви помогнеме.</p>
+            <p>Нудиме избор на возила прилагодени на вашите потреби, а нашиот пријателски 
+                персонал е посветен да ви помогне да го пронајдете совршениот избор. 
+                Нашата цел е да го направиме вашето искуство со купување автомобил колку што е можно поубаво.</p>
+        </div>
+
+        <div class="brands">
+            <div class="brand">
+                <h2>Renault</h2>
+                <p>Renault ви нуди иновативни возила кои комбинираат стил, технологија и удобност. 
+                    Од компактниот Renault Megane до динамичниот Renault Captur, Renault нуди широк спектар на автомобили погодни за секој возач.</p>
+                <img src="renaultlogo.jpg" alt="Renault">
+            </div>
+
+            <div class="brand">
+                <h2>Nissan</h2>
+                <p>За возачите кои ги ценат перформансите и безбедноста, Nissan нуди низа возила, од популарниот Nissan Juke 
+                    до сестраниот Nissan Qashqai. Откријте го светот на Nissan и искусете го возењето како никогаш досега.</p><br>
+                <img src="nissanlogo.jpg" alt="Nissan">
+            </div>
+
+            <div class="brand">
+                <h2>Toyota</h2>
+                <p>Toyota е позната по тоа што произведува сигурни, долготрајни и еколошки автомобили.  
+                    Со модели како Yaris-Cross и смелиот C-HR, Toyota обезбедува совршена рамнотежа на перформанси и одржливост.</p>
+                <img src="toyotalogo.jpg" alt="Toyota">
+            </div>
+
+            <div class="brand">
+                <h2>Dacia</h2>
+                <p>Dacia нуди возила без компромиси за квалитетот. Без 
+                    разлика дали барате компактен автомобил или SUV како Dacia Duster, Dacia нуди исклучителна вредност за парите.</p>
+                <img src="dacialogo.png" alt="Dacia">
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact-footer">
+        <div class="footer-content">
+            <p class="contact-title">Контакт</p>
+            <p class="contact-info">Е-пошта: mihajlonaumoski07@gmail.com</p>
+            <p class="contact-info">Телефон: 075-234-488</p>
+            <p class="contact-info">Адреса: Никола Ѓурковиќ 12, Крушево</p>
+            <p class="copyright">&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

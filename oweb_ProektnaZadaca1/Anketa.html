@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renault, Nissan, Toyota, Dacia</title>
+    <style>
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lato', sans-serif;
+            background: url(background1.jpg) no-repeat center center fixed;
+            background-color: black;
+            background-size: cover;
+            height: 100vh;
+        }
+nav {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            overflow: auto;
+        }
+ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+nav li {
+            float: left;
+            margin-left: 2em;
+        }
+nav a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            font-size: 15px;
+            padding: 20px 10px;
+        }
+nav a:hover {
+            background: #53a3f9;
+            color: black;
+        }
+.nav-logos {
+            float: right;
+        }
+.nav-logo {
+            max-width: 50px;
+            max-height: 50px;
+        }
+.subbody {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 40px;
+        }
+.textarea-container {
+            width: 48%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+            color:white;
+        }
+.textarea-container h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: white;
+        }
+.textarea-container select,
+.textarea-container textarea,
+.textarea-container input[type="radio"] {
+            width: 100%;
+            margin-top: 10px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 10px;
+        }
+.textarea-container select {
+        height: 40px;
+        margin-bottom: 10px;
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+    }
+
+.textarea-container select option {
+        background-color: black;
+        color: white;
+    }
+.textarea-container textarea {
+            height: 150px;
+            resize: none;
+        }
+.textarea-container .btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #53a3f9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+.textarea-container .btn:hover {
+            background: rgb(239, 75, 75);
+            transition: 0.4s;
+            color: white ;
+        }
+.opinions-container {
+            width: 48%;
+            background: rgba(0,0,0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+            overflow-y: auto;
+            max-height: 400px;
+            color:white;
+        }
+.opinion {
+            background: rgba(0, 0, 0, 0.8);
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+.contact-footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.copyright {
+    font-size: 1em;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+        
+        
+    </style>
+</head>
+<body onload="displayOpinions()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca1/home.html">Дома</a></li>
+                <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca1/NoviVozila.html">Нови возила</a></li>
+                <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca1/PolovniVozila.html">Половни возила</a></li>
+                <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca1/Anketa.html">Анкета</a></li>
+            </ul>
+            <div class="nav-logos">
+                <img class="nav-logo" src="dacialogo.png" alt="logo">
+                <img class="nav-logo" src="renaultlogo.jpg" alt="logo">
+                <img class="nav-logo" src="nissanlogo.jpg" alt="logo">
+                <img class="nav-logo" src="toyotalogo.jpg" alt="logo">
+            </div>
+        </nav>
+    </header>
+
+    <div class="subbody">
+        
+        <div class="textarea-container">
+            <h3>Споделете го вашето мислење</h3>
+            
+            
+            <label for="rating">Оцени ја страната:</label>
+            <select id="rating" name="rating">
+                <option value="1">1 - Лоша</option>
+                <option value="3">3 - Добра</option>
+                <option value="5">5 - Одлична</option>
+            </select>
+
+           
+            <label>Дали би ја препорачале оваа веб страна?</label>
+    <div class="rating-container">
+    <label for="recommendYes">Да</label>
+    <input type="radio" name="recommend" value="Yes" id="recommendYes">
+    
+    <label for="recommendNo">Не</label>
+    <input type="radio" name="recommend" value="No" id="recommendNo">
+    </div>
+
+
+           
+            <textarea id="opinionTextarea" placeholder="Ваше мислење..."></textarea>
+
+            
+            <button class="btn" id="submitOpinion" onclick="postOpinions()">Постирај</button>
+        </div>
+
+       
+        <div class="opinions-container" id="opinionsContainer">
+            <h3>Мислењa:</h3>
+           
+        </div>
+    </div>
+
+    <footer class="contact-footer">
+        <div class="footer-content">
+            <p class="contact-title">Контакт</p>
+            <p class="contact-info">Е-пошта: mihajlonaumoski07@gmail.com</p>
+            <p class="contact-info">Телефон: 075-234-488</p>
+            <p class="contact-info">Адреса: Никола Ѓурковиќ 12, Крушево</p>
+            <p class="copyright">&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="NoviScript.js"></script>
+</body>
+</html>
