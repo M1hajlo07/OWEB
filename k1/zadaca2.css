@@ -1,0 +1,10 @@
+.square {
+    width: 70px; /* Width of the square */
+    height: 70px; /* Height of the square */
+    border: 1px solid black;
+   
+    
+}
+#pom{
+    display:flex;
+}
