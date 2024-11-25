@@ -45,7 +45,7 @@ function proveri() {
             vlez.value = "";
             window.alert("Gresen zbor! Probaj uste ednas.");
         } else {
-            rezultat.innerHTML = "Ne uspea da go pogodis zborot vo dozvolenite obidi.<br>Baraniot zbor bese: " + izbran_zbor;
+            rezultat.textContent = "Ne uspea da go pogodis zborot vo dozvolenite obidi.<br>Baraniot zbor bese: " + izbran_zbor;
             window.alert("Igrata ne e uspesno zavrsena.");
             newbutton.style.display = "inline-block";
             vlez.disabled = true; 
