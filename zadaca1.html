@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Погоди го бројот!</title>
+
+	<style>
+		html {
+	font-family: sans-serif;
+	}
+	
+		body {
+	width: 50%;
+	max-width: 800px;
+	min-width: 480px;
+	margin: 0 auto;
+	}
+	</style>
+</head>
+
+<body>
+<!--YOUR CODE HERE--> 
+
+    <h1>Погоди го бројот</h1>
+    <p>Избран е случаен број меѓу 1 и 10. Обиди се да го погодиш.</p>
+    
+        Внеси број:<input type="text" name="text" id="broj">
+        <button  value="pogodi" id="submit" onclick="proveriBroj()">Submit guess</button>
+        
+<script type = "text/javascript">
+// YOUR CODE HERE
+var broj;
+function start(){
+
+broj=Math.floor(Math.random()*10)+1;
+numTries=1;
+document.getElementById("broj").value="";
+}
+function proveriBroj(){
+    var brojce=document.getElementById("broj").value;
+    brojce=parseInt(brojce);
+    if(brojce<0 || brojce>10){
+        window.alert("ВНЕСОВТЕ БРОЈ НАДВОР ОД ЗАДАДЕНИТЕ ГРАНИЦИ! ОБИДЕТЕ СЕ ПОВТОРНО.");
+        document.getElementById("broj").value="";
+        return;
+
+    }
+    else{
+        if(brojce==broj){
+        	window.alert("ЧЕСТИТКИ!!! ГО ПОГОДИ БРОЈОТ ОД "+ numTries + " ОБИДИ");
+            document.getElementById("broj").value=" ";
+            start();
+        }
+        else{
+            if(brojce>broj){
+			numTries=numTries+1;
+			document.getElementById("broj").value="";
+			window.alert("ГРЕШКА!!! ОБИДИ СЕ СО ПОМАЛ БРОЈ");
+			}
+            if(brojce<broj){
+			numTries=numTries+1;
+			document.getElementById("broj").value="";
+			window.alert("ГРЕШКА!!! ОБИДИ СЕ СО ПОГОЛЕМ БРОЈ");
+			}
+        
+
+         }
+    }
+}
+window.addEventListener("load",start,false);
+</script>
+</body>
+</html>					
