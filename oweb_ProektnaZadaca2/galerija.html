@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renault, Nissan, Toyota, Dacia</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="NoviScript.js"></script>
+    <style type="text/css">
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    margin:0;
+    background: url(background1.jpg) no-repeat center center fixed;
+    background-color: black;
+    background-size: cover;
+
+}
+.subbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+.gallery {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    gap: 20px;  
+    background:none; 
+     margin-bottom: 20px;
+    width: 80%;
+    height: 50%;
+}
+
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    width:100%; 
+}
+
+
+.gallery-item img {
+    width: 100%; 
+    height:100%; 
+    border-radius: 8px;  
+    transition: transform 0.3s ease;  
+}
+
+
+.gallery-item img:hover {
+    transform: scale(1.05); 
+}
+
+
+.interactions {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    width: 100%;  
+    max-width: 500px;  
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.interactions span{
+font-size: 35px;
+margin: 15px;
+color: white;
+cursor: pointer;
+}
+.interactions label{
+font-size: 30px;
+color: white;
+}
+.comments {
+    width: 90%; 
+    height: 50px;  
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;  
+    outline: none;
+    margin-top: 5px;
+    box-sizing: border-box;  
+}
+
+
+.comments:focus {
+    border-color: #2c6fb7;
+    background-color: #f0f8ff;
+}
+nav{
+    background:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    overflow: auto;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+   
+}
+ nav li{
+    float: left;
+    margin-left: 2em;
+ }
+nav a{
+    width: auto;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    padding:20px 10px;
+}
+nav a:hover{
+    background: #53a3f9;
+    color: black;
+}
+.nav-logos{
+    float: right;
+}
+.nav-logo{
+    max-width: 50px;
+    max-height: 50px;}
+
+    .contact-footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.copyright {
+    font-size: 1em;
+    margin-top: 20px;
+    font-style: italic;
+}
+.comments-section {
+            margin-top: 20px;
+        }
+#commentBox {
+            width: 100%;
+            padding: 10px;
+            background: none;
+            border-top: none;  
+            border-left: none; 
+            border-right: none;
+            border-bottom: 2px solid white;
+            color: white;
+            margin-bottom: 20px;
+            outline: none;
+            
+        }
+button {
+            margin: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color:#53a3f9;
+            color:white;
+            border: none;
+            border-radius: 5px;
+        }
+button:hover
+    {
+      background: rgb(239, 75, 75);
+      transition: 0.4s;
+      color: white ;
+    }
+#postedComments {
+            margin-top: 20px;
+            
+        }
+
+summary{
+            color:white
+    }
+
+    </style>
+</head>
+<body onload="setImages()">
+    <header><nav>
+        <ul>
+            <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca2/home.html">Дома</a></li>
+            <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca2/NoviVozila.html">Нови возила</a></li>
+            <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca2/PolovniVozila.html">Половни возила</a></li>
+            <li><a href="file:///C:/Users/NoteBook 1/Desktop/OWEB/oweb_ProektnaZadaca2/Anketa.html">Анкета</a></li>
+       </ul>
+       <div class="nav-logos">
+           <img class="nav-logo" src="dacialogo.png" alt="logo">
+           <img class="nav-logo" src="renaultlogo.jpg" alt="logo">
+           <img class="nav-logo" src="nissanlogo.jpg" alt="logo">
+           <img class="nav-logo" src="toyotalogo.jpg" alt="logo">
+           
+       </div>
+               
+   </nav></header>
+   <div class="subbody">
+    <div class="gallery">
+        <div class="gallery-item">
+            <img id="slika1" src="https://via.placeholder.com/300" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img id="slika2" src="https://via.placeholder.com/300" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img id="slika3" src="https://via.placeholder.com/300" alt="Image 3">
+        </div>
+    </div>
+
+
+   
+    <div class="interactions">
+        <span id="heart" class="likes" onclick="incrementLikes(localStorage.getItem('slika'))">&#x2764<label id="counter">0</label></span>
+        <div class="comments-section">
+            <textarea id="commentBox" placeholder="Ваш коментар..." rows="2" cols="50"></textarea>
+            <button onclick="postComment(localStorage.getItem('slika'))">Постирај</button>
+            <details>
+                <summary>Коментари</summary>
+            <div id="postedComments"></div>
+        </details>
+        </div>
+    </div>
+</div>
+<footer class="contact-footer">
+    <div class="footer-content">
+        <p class="contact-title">Контакт</p>
+        <p class="contact-info">Е-пошта: mihajlonaumoski07@gmail.com</p>
+        <p class="contact-info">Телефон: 075-234-488</p>
+        <p class="contact-info">Адреса: Никола Ѓурковиќ 12, Крушево</p>
+        <p class="copyright">&copy; 2024 Your Company. All rights reserved.</p>
+
+    </div>
+  </footer>
+</body>
+</html>
